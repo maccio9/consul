@@ -11,7 +11,7 @@
 
 <main>
 
-  <%= render "shared/section_header", i18n_namespace: "legislation_proposals.index.section_header", image: "proposals", is_proposals: false %>
+  <%= render "shared/section_header",  title: "Consultas Públicas", i18n_namespace: "legislation_proposals.index.section_header", description: Setting['description_header_legislation_proposals'], is_proposals: false %>
 
   <div class="row">
     <div id="proposals" class="proposals-list small-12 medium-9 column">
@@ -57,8 +57,12 @@
           <% end %>
         </div>
         <% if params[:retired].blank? %>
-          <%= render 'categories' %>
-          <%= render 'geozones' %>
+          <% if Setting.to_bool('categories_legislation_proposals_is_visible') %>
+            <%= render 'categories' %>
+          <% end %>
+          <% if Setting.to_bool('group_legislation_proposals_is_visible') %>
+            <%= render 'geozones' %>
+          <% end %>
           <div id="section_help" class="margin" data-magellan-target="section_help">
             <h2 class="sidebar-title"><%= t("legislation_proposals.index.section_footer.title") %></h2>
             <p>Cualquier persona puede realizar comentarios a los compromisos, ya sea a título individual o en

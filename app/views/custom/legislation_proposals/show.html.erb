@@ -116,17 +116,19 @@
             <%= simple_format text_with_links(@proposal.retired_explanation), {}, sanitize: false %>
           </div>
         <% end %>
-
-        <%= render 'shared/tags', taggable: @proposal %>
-
-        <%= render 'show_geozones', geozonable: @proposal %>
+        <% if Setting.to_bool('categories_legislation_proposals_is_visible') %>
+          <%= render 'shared/tags', taggable: @proposal %>
+        <% end %>
+        <% if Setting.to_bool('group_legislation_proposals_is_visible') %>
+          <%= render 'show_geozones', geozonable: @proposal %>
+        <% end %>
 
         <%= render 'relationable/related_content', relationable: @proposal %>
 
         <div class="js-moderator-proposal-actions margin">
           <%= render 'proposals/actions', proposal: @proposal, inactive: !Proposal.legislation_in_active_period? %>
         </div>
-        
+
       </div>
 
       <aside class="small-12 medium-3 column">

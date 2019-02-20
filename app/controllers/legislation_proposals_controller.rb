@@ -10,8 +10,9 @@ class LegislationProposalsController < ApplicationController
   before_action :load_settings
   before_action :validate_settings, only: [:new, :create]
   before_action :validate_date, only: [:new, :create, :edit]
+  before_action :validate_param, only: :index
 
-  feature_flag :proposals
+  feature_flag :legislation_proposals
 
   invisible_captcha only: [:create, :update], honeypot: :subtitle
 
@@ -158,6 +159,12 @@ class LegislationProposalsController < ApplicationController
         if proposal && !proposal.hidden_at.blank?
           redirect_to legislation_proposals_path(is_proposal: false), notice: 'La consulta pública que intenta acceder fue eliminada.'
         end
+      end
+    end
+
+    def validate_param
+      if params[:is_proposal].blank?
+        redirect_to legislation_proposals_path(is_proposal: false)
       end
     end
 

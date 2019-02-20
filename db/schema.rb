@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180313083649) do
+ActiveRecord::Schema.define(version: 20180611164600) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -850,8 +850,8 @@ ActiveRecord::Schema.define(version: 20180313083649) do
     t.datetime "confirmed_hide_at"
     t.integer  "hot_score",           limit: 8,  default: 0
     t.integer  "confidence_score",               default: 0
-    t.datetime "created_at",                                 null: false
-    t.datetime "updated_at",                                 null: false
+    t.datetime "created_at",                                    null: false
+    t.datetime "updated_at",                                    null: false
     t.string   "responsible_name",    limit: 60
     t.text     "summary"
     t.string   "video_url"
@@ -862,6 +862,7 @@ ActiveRecord::Schema.define(version: 20180313083649) do
     t.text     "retired_explanation"
     t.integer  "community_id"
     t.integer  "author_type",                    default: 0
+    t.boolean  "is_proposal",                    default: true
   end
 
   add_index "proposals", ["author_id", "hidden_at"], name: "index_proposals_on_author_id_and_hidden_at", using: :btree
@@ -1110,6 +1111,7 @@ ActiveRecord::Schema.define(version: 20180313083649) do
     t.string   "document_country"
     t.string   "in_place"
     t.string   "surname"
+    t.boolean  "terms_of_service"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree

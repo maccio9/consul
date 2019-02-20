@@ -1,12 +1,10 @@
 <header>
   <div class="row header-bg">
     <div class="top-bar">
-
-      <%= link_to root_path, class: "show-for-small-only" , accesskey: "0" do %>
-        <p class="logo-yellow logo"> Gobierno Abierto. </p><br>
-      <% end %>
-           <%= link_to "4to Plan de Acción Nacional 2018 - 2020" , root_path, class: "logo show-for-small-only" %>
-
+        <%= link_to root_path, class: "show-for-small-only" , accesskey: "0" do %>
+          <p class="logo-yellow logo"> <%= Setting['header_title'] %> </p><br>
+        <% end %>
+        <%= link_to Setting['header_sub_title'] || '', root_path, class: "logo show-for-small-only" %>
       <span data-responsive-toggle="responsive_menu" data-hide-for="medium" class="float-right">
         <span class="menu-icon dark" data-toggle></span>
       </span>
@@ -14,8 +12,8 @@
       <div id="responsive_menu">
         <div class="top-bar-title medium-5 large-6">
           <%= link_to root_path, class: "hide-for-small-only logo", accesskey: "0" do %>
-           <h3 class="logo-yellow"> Gobierno Abierto. </h3><br>
-            4to Plan de Acción Nacional 2018 - 2020
+              <h3 class="logo-yellow"> <%= Setting['header_title'] %> </h3><br>
+              <%= Setting['header_sub_title'] %>
           <% end %>
         </div>
 

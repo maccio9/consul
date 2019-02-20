@@ -44,5 +44,14 @@ class Setting < ActiveRecord::Base
       setting.save!
       value
     end
+
+    def to_bool(key)
+      setting = where(key: key).first
+      if setting
+        setting.value == 'true' || setting.value == 'True'
+      else
+        false
+      end
+    end
   end
 end

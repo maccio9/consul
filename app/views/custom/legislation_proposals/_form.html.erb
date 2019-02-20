@@ -44,12 +44,12 @@
       <%= f.label :external_url, 'Enlace a información adicional' %>
       <%= f.text_field :external_url, placeholder: 'Enlace a información adicional', label: false %>
     </div>
-
-    <div class="small-12 medium-6 column">
-      <%= f.label :geozone_id,  "* Aporta a" %>
-      <%= f.select :geozone_id, geozone_select_options, {include_blank: "Seleccione una opción", label: false} %>
-    </div>
-
+    <% if Setting.to_bool('group_legislation_proposals_is_visible') %>
+      <div class="small-12 medium-6 column">
+        <%= f.label :geozone_id,  "* #{Setting['group_legislation_proposals_name']}" %>
+        <%= f.select :geozone_id, geozone_select_options, {include_blank: "Seleccione una opción", label: false} %>
+      </div>
+    <% end %>
     <% if feature?(:map) %>
       <div class="small-12 column">
 
@@ -64,25 +64,27 @@
       </div>
     <% end %>
 
-    <div class="small-12 column">
-      <div id="category_tags" class="tags">
-        <%= f.label :category_tag_list, t("proposals.form.tag_category_label") %>
-        <p class="help-text" id="tag-list-help-text">Seleccione una o más categorías del tema de su propuesta</p>
+    <% if Setting.to_bool('categories_legislation_proposals_is_visible') %>
+      <div class="small-12 column">
+        <div id="category_tags" class="tags">
+          <%= f.label :category_tag_list, Setting['categories_legislation_proposals_name'] %>
+          <p class="help-text" id="tag-list-help-text"><%= Setting['categories_legislation_proposals_help_text']%></p>
 
-        <% @categories.each do |tag| %>
-          <a class="js-add-tag-link"><%= tag.name %></a>
-        <% end %>
+          <% @categories.each do |tag| %>
+            <a class="js-add-tag-link"><%= tag.name %></a>
+          <% end %>
+        </div>
+
+        <br>
+        <%= f.text_field :tag_list, value: @proposal.tag_list.to_s,
+                          label: false,
+                          readonly: true,
+                          maxlength: 160,
+                          class: 'js-tag-list tag-autocomplete',
+                          aria: {describedby: "tag-list-help-text"},
+                          data: {js_url: suggest_tags_path} %>
       </div>
-
-      <br>
-      <%= f.text_field :tag_list, value: @proposal.tag_list.to_s,
-                        label: false,
-                        readonly: true,
-                        maxlength: 160,
-                        class: 'js-tag-list tag-autocomplete',
-                        aria: {describedby: "tag-list-help-text"},
-                        data: {js_url: suggest_tags_path} %>
-    </div>
+    <% end %>
 
     <div class="small-12 column">
       <div class="row">
@@ -97,7 +99,7 @@
                                             aria: {describedby: "responsible-name-help-text"} %>
       </div>
     </div>
-    
+
 
     <div class="actions small-12 column">
       <%= f.submit(class: "button", value: t("legislation_proposals.#{action_name}.form.submit_button")) %>

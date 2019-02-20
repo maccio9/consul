@@ -35,9 +35,9 @@ class Proposal < ActiveRecord::Base
 
   validates :title, presence: true
   validates :summary, presence: true
-  validates :geozone_id, presence: true
+  validates :geozone_id, presence: true, if: :group_is_visible?
   validates :author, presence: true
-  validates :tag_list, presence: true
+  validates :tag_list, presence: true, if: :categories_is_visible?
   validates :title, length: { in: 4..Proposal.title_max_length }
   validates :description, length: { maximum: Proposal.description_max_length }
   validates :retired_reason, inclusion: { in: RETIRE_OPTIONS, allow_nil: true }
@@ -71,6 +71,22 @@ class Proposal < ActiveRecord::Base
   scope :not_supported_by_user,    ->(user) { where.not(id: user.find_voted_items(votable_type: "Proposal").compact.map(&:id)) }
   scope :is_proposal, -> { where(is_proposal: true) }
   scope :is_legislation_proposal, -> { where(is_proposal: false) }
+
+  def categories_is_visible?
+    if self.is_proposal || Setting.to_bool('categories_legislation_proposals_is_visible')
+      return true
+    else
+      return false
+    end
+  end
+
+  def group_is_visible?
+    if self.is_proposal || Setting.to_bool('group_legislation_proposals_is_visible')
+      return true
+    else
+      return false
+    end
+  end
 
   def url
     if self.is_proposal

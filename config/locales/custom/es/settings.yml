@@ -7,6 +7,28 @@ es:
     auto_publish_comments: "Comentarios publicados automáticamente"
     proposals_require_admin: "Creación de Propuestas solo para administradores y moderadores"
     legislation_proposals_require_admin: "Creación de Consulta pública solo para administradores y moderadores"
+    categories_legislation_proposals_is_visible: Categorías en consulta pública es visible
+    categories_legislation_proposals_name: Nombre de Categorías en consulta pública
+    categories_legislation_proposals_help_text: Texto de ayuda para nombre de categorías en consulta pública
+    group_legislation_proposals_is_visible: Grupo en consulta pública es visible
+    group_legislation_proposals_name: Nombre de Grupo en consulta pública
+    description_header_legislation_proposals: Descripcion del header de la consulta pública
+    description_header_proposals: Descripcion del header de la propuesta
+    home_title_stages: Título de las etapas
+    home_title_stages_1: Titulo de la etapa 1
+    home_description_stages_1: Descripción de la etapa 1
+    home_date_stages_1: Fecha de la etapa 1
+    home_title_stages_2: Titulo de la etapa 2
+    home_description_stages_2: Descripción de la etapa 2
+    home_date_stages_2: Fecha de la etapa 2
+    home_title_stages_3: Titulo de la etapa 3
+    home_description_stages_3: Descripción de la etapa 3
+    home_date_stages_3: Fecha de la etapa 3
+    home_title_stages_4: Titulo de la etapa 4
+    home_description_stages_4: Descripción de la etapa 4
+    home_date_stages_4: Fecha de la etapa 4
+    header_title: Título del menú
+    header_sub_title: Sub-título del menú
     title_home: "Título Home"
     sub_title_home: "Sub título Home"
     description_home: "Descripción Home"

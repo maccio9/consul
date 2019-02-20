@@ -2,15 +2,11 @@
   <div class="help-header no-margin-top margin-bottom">
     <div class="row">
       <div class="small-12 column" data-magellan>
-        <h3 class=" blue-text inline-block">Propuestas</h3>
+        <h3 class=" blue-text inline-block"><%= title %></h3>
         <% if !Proposal.is_proposal.in_active_period?  %>
           <div>
             <p>
-              Finalizó el plazo para ingresar nuevas propuestas. El Grupo de Trabajo de Gobierno Abierto y los organismos
-              del Estado se encuentran analizando todas la propuestas. Para obtener más información sobre las etapas del
-              proceso, ingresar en la opción
-              <%= link_to "Más información", more_info_path %> o
-              <%= link_to "www.gobiernoabierto.gub.uy", "http://gobiernoabierto.gub.uy/", target: "_blank" %>
+              <%= description.html_safe if local_assigns[:description]  %>
             </p>
           </div>
         <% end %>
@@ -22,11 +18,10 @@
   <div class="help-header no-margin-top margin-bottom">
     <div class="row">
       <div class="small-12 column" data-magellan>
-        <h3 class=" blue-text inline-block">Consultas Públicas</h3>
+        <h3 class=" blue-text inline-block"><%= title %></h3>
         <div>
           <p>
-            A través de la consulta pública podrás conocer los compromisos que integrarán el 4to plan de Acción de
-            Gobierno Abierto, y realizar aportes que enriquezcan cada una de las iniciativas.
+           <%= description.html_safe if local_assigns[:description] %>
           </p>
         </div>
         <%= link_to t("#{i18n_namespace}.help"), "#section_help", class: "float-right" %>

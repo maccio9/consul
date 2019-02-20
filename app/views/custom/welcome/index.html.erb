@@ -33,31 +33,31 @@
 <% end %>
 
 <div class="row">
-  <%= link_to 'Etapas del proceso de cocreación', more_info_path , class: 'title-home m-big-title-blue titel-margin-left m-big-title line-h-3_5'%>
+  <%= link_to Setting['home_title_stages'] , more_info_path , class: 'title-home m-big-title-blue titel-margin-left m-big-title line-h-3_5'%>
 </div>
 <% cache [locale_and_user_status, @featured_debates, @featured_proposals, 'featured'] do %>
   <main>
     <div class="small-12 column text-center sub-task-home">
       <div class="row">
         <div class="small-12 medium-3 pull-left yellow-border column">
-          <p class="blue-text m-big-text">crear</p>
-          <p class="big-p">presentá tus propuestas</p>
-          <p class="pull-left big-date pull-top-1">Hasta el 30 de junio</p>
+          <p class="blue-text m-big-text"><%= Setting['home_title_stages_1'] %></p>
+          <p class="big-p"><%= Setting['home_description_stages_1'] %></p>
+          <p class="pull-left big-date pull-top-1"><%= Setting['home_date_stages_1'] %></p>
         </div>
         <div class="small-12 medium-3 pull-left yellow-border column">
-          <p class="blue-text m-big-text">priorizar</p>
-          <p class="big-p">el grupo de trabajo las priorizará</p>
-          <p class="pull-left big-date pull-top-2">Junio/Julio</p>
+          <p class="blue-text m-big-text"><%= Setting['home_title_stages_2'] %></p>
+          <p class="big-p"><%= Setting['home_description_stages_2'] %></p>
+          <p class="pull-left big-date pull-top-2"><%= Setting['home_date_stages_2'] %></p>
         </div>
         <div class="small-12 medium-3 pull-left yellow-border column">
-          <p class="blue-text m-big-text">consultar</p>
-          <p class="big-p">participá de la consulta pública</p>
-          <p class="pull-left big-date pull-top-3">Hasta el 7 de setiembre</p>
+          <p class="blue-text m-big-text"><%= Setting['home_title_stages_3'] %></p>
+          <p class="big-p"><%= Setting['home_description_stages_3'] %></p>
+          <p class="pull-left big-date pull-top-3"><%= Setting['home_date_stages_3'] %></p>
         </div>
         <div class="small-12 medium-3 pull-left yellow-border column">
-          <p class="blue-text m-big-text">aprobar</p>
-          <p class="big-p">los compromisos serán aprobados por el Poder Ejecutivo</p>
-          <p class="pull-left big-date pull-top-4">Setiembre</p>
+          <p class="blue-text m-big-text"><%= Setting['home_title_stages_4'] %></p>
+          <p class="big-p"><%= Setting['home_description_stages_4'] %></p>
+          <p class="pull-left big-date pull-top-4"><%= Setting['home_date_stages_4'] %></p>
         </div>
       </div>
     </div>

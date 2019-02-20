@@ -114,8 +114,9 @@
             <%= simple_format text_with_links(@proposal.retired_explanation), {}, sanitize: false %>
           </div>
         <% end %>
-
-        <%= render 'shared/tags.html.erb', taggable: @proposal %>
+        <% if Setting.to_bool('categories_legislation_proposals_is_visible') %>
+          <%= render 'shared/tags.html.erb', taggable: @proposal %>
+        <% end %>
       </div>
 
     </div>

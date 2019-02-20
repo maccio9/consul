@@ -11,11 +11,7 @@
 
 <main>
 
-  <% if @search_terms || @advanced_search_terms || @tag_filter || params[:retired].present? %>
-    <%= render "shared/section_header", i18n_namespace: "proposals.index.section_header", image: "proposals", is_proposals: true %>
-  <% else %>
-    <%= render "shared/section_header", i18n_namespace: "proposals.index.section_header", image: "proposals", is_proposals: true %>
-  <% end %>
+  <%= render "shared/section_header", title: "Propuestas", i18n_namespace: "proposals.index.section_header", description: Setting['description_header_proposals'],  is_proposals: true %>
 
   <div class="row">
     <div id="proposals" class="proposals-list small-12 medium-9 column">
@@ -38,7 +34,7 @@
       <% end %>
 
       <%= render 'shared/order_links', i18n_namespace: "proposals.index" %>
-      
+
       <% if @proposals.any? %>
         <div class="show-for-small-only">
           <%= link_to t("proposals.index.start_proposal"),
