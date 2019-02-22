@@ -227,12 +227,26 @@ a:focus {
   color: initial;
 }
 
+.menu-icon.dark {
+  line-height: 3rem;
+}
+
+.auth-image {
+  background: $brand image-url('lateral_acceder.jpg');
+}
+
 @media (min-width: 1300px) {
 
 	.margin-footer-p{
 		padding-left: 0px;
 	}
 
+}
+
+@media (min-width: 100px) and (max-width: 425px) {
+  .auth-image {
+    background: $brand image-url('lateral_acceder_smart.jpg');
+  }
 }
 
 @media (min-width: 810px) and (max-width: 1030px) {
@@ -308,7 +322,7 @@ a:focus {
 	}
 
 	.highlight{
-		background-image: asset_url('home-bg-small.png') !important;
+		background-image: asset_url('ImagenCentral_2.jpg') !important;
 		min-height: 200px;
 	}
 	.logo-yellow {

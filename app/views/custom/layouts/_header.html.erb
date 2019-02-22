@@ -2,7 +2,7 @@
   <div class="row header-bg">
     <div class="top-bar">
         <%= link_to root_path, class: "show-for-small-only" , accesskey: "0" do %>
-          <p class="logo-yellow logo"> <%= Setting['header_title'] %> </p><br>
+          <h3 class="logo-yellow logo"> <%= Setting['header_title'] %> </h3><br>
         <% end %>
         <%= link_to Setting['header_sub_title'] || '', root_path, class: "logo show-for-small-only" %>
       <span data-responsive-toggle="responsive_menu" data-hide-for="medium" class="float-right">
