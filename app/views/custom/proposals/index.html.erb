@@ -11,7 +11,7 @@
 
 <main>
 
-  <%= render "shared/section_header", title: "Propuestas", i18n_namespace: "proposals.index.section_header", description: Setting['description_header_proposals'],  is_proposals: true %>
+  <%= render "shared/section_header", title: Setting['proposals_title_header'], i18n_namespace: "proposals.index.section_header", description: Setting['proposals_description_header'],  title_help: Setting['proposals_title_help'], is_proposals: true %>
 
   <div class="row">
     <div id="proposals" class="proposals-list small-12 medium-9 column">

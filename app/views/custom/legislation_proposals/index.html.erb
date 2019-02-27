@@ -11,7 +11,7 @@
 
 <main>
 
-  <%= render "shared/section_header",  title: "Consultas Públicas", i18n_namespace: "legislation_proposals.index.section_header", description: Setting['description_header_legislation_proposals'], is_proposals: false %>
+  <%= render "shared/section_header",  title: Setting['legislation_proposals_title_header'], i18n_namespace: "legislation_proposals.index.section_header", description: Setting['legislation_proposals_description_header'], title_help: Setting['legislation_proposals_title_help'], is_proposals: false %>
 
   <div class="row">
     <div id="proposals" class="proposals-list small-12 medium-9 column">
@@ -57,30 +57,25 @@
           <% end %>
         </div>
         <% if params[:retired].blank? %>
-          <% if Setting.to_bool('categories_legislation_proposals_is_visible') %>
+          <% if Setting.to_bool('legislation_proposals_categories_is_visible') %>
             <%= render 'categories' %>
           <% end %>
-          <% if Setting.to_bool('group_legislation_proposals_is_visible') %>
+          <% if Setting.to_bool('legislation_proposals_group_is_visible') %>
             <%= render 'geozones' %>
           <% end %>
           <div id="section_help" class="margin" data-magellan-target="section_help">
-            <h2 class="sidebar-title"><%= t("legislation_proposals.index.section_footer.title") %></h2>
-            <p>Cualquier persona puede realizar comentarios a los compromisos, ya sea a título individual o en
-            representación de organismos públicos, sociedad civil organizada, academia o sector privado.<br><br>
-            Para realizar comentarios a los compromisos, debes previamente registrarte en
-            <%= link_to 'ID Uruguay', 'https://mi.iduruguay.gub.uy/registro', target: :_blank %> e iniciar sesión en la
-            plataforma.<br><br>
-            Ingresando a <%= link_to 'Consulta Pública', legislation_proposals_path(is_proposal: false) %>, podés seleccionar un
-            compromiso y realizar tus comentarios.<br><br>
-            Tus comentarios nos sirven para mejorar los compromisos del 4° Plan de Acción Nacional de Gobierno Abierto.<br><br>
-            Al ingresar al compromiso seleccionado, se visualizará un número identificatorio, un título, un resumen y un
-            texto explicativo; si querés conocer la totalidad del compromiso, descargá la ficha adjunta.<br><br>
-            <strong>El plazo para realizar comentarios vence el 7 de setiembre de 2018.</strong><br><br>
-            Se denominan <strong>"compromisos de Gobierno Abierto"</strong> a aquellas iniciativas que aporten a
-            los pilares de gobierno abierto (transparencia y acceso a la información pública, rendición de cuentas
-            públicas, participación ciudadana, colaboración e innovación pública y ciudadana), las cuales buscan
-            contribuir al interés general sobre una temática determinada y deberán ser ejecutadas en un plazo de 2 años.<br>
+            <h2 class="sidebar-title"><%= Setting['legislation_proposals_title_help']%></h2>
+            <p>Cualquier persona, nacional o extranjera puede realizar aportes y/o comentarios, ya sea a título individual o en representación de organismos públicos, sociedad civil organizada, academia o sector privado.</p>
+            <p>Para realizar aportes y/o comentarios:</p>
+            <ul>
+              <li>Debes previamente registrarte en <%= link_to 'ID Uruguay', 'https://mi.iduruguay.gub.uy/registro', target: :_blank %> e iniciar sesión en la plataforma.
+              </li>
+              <li>Luego ingresar en la sección <%= link_to '"Consulta Pública"', legislation_proposals_path(is_proposal: false) %> en la propuesta  y en “Comentarios” incorporar tu aporte. También puedes realizar comentarios a otros ya existentes
+              </li>
+            </ul>
+            <p>Tus aportes y/o comentarios nos sirven para mejorar el documento “Principios generales sobre el uso de inteligencia artificial para el gobierno digital” y en la Etapa 3 para  avanzar de forma participativa con toda la ciudadanía en una estrategia país sobre Inteligencia Artificial.
             </p>
+            <p>El plazo para realizar comentarios vence el <%= Setting['legislation_proposals_date_text_finish_comment']%>.”</p>
           </div>
         <% end %>
       </aside>

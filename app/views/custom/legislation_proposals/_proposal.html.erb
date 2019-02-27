@@ -57,7 +57,7 @@
               <p><%= proposal.summary %></p>
               <div class="truncate"></div>
             </div>
-            <% if Setting.to_bool('categories_legislation_proposals_is_visible') %>
+            <% if Setting.to_bool('legislation_proposals_categories_is_visible') %>
               <%= render "shared/tags", taggable: proposal, limit: 5, is_proposal: false %>
             <% end %>
           <% end %>

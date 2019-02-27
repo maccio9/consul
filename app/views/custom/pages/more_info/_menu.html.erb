@@ -2,25 +2,25 @@
   <div class="small-12 column">
     <ul class="menu-pages" data-magellan>
       <li>
-        <%= link_to "1. Crear", "#crear", class: "button expanded" %>
+        <%= link_to Setting['home_title_stages_1'], "##{Setting['home_title_stages_1'].gsub(/\s+/, '')}", class: "button expanded" %>
       </li>
       <li>
         <%= image_tag 'flecha.png', alt: 'flecha', class: "hide-for-small-only" %>
       </li>
       <li>
-        <%= link_to "2. Priorizar", "#priorizar", class: "button expanded" %>
+        <%= link_to Setting['home_title_stages_2'], "##{Setting['home_title_stages_2'].gsub(/\s+/, '')}", class: "button expanded" %>
       </li>
       <li>
         <%= image_tag 'flecha.png', alt: 'flecha' ,class: "hide-for-small-only" %>
       </li>
       <li>
-        <%= link_to "3. Consultar", "#consultar", class: "button expanded" %>
+        <%= link_to Setting['home_title_stages_3'], "##{Setting['home_title_stages_3'].gsub(/\s+/, '')}", class: "button expanded" %>
       </li>
       <li>
         <%= image_tag 'flecha.png', alt: 'flecha', class: "hide-for-small-only" %>
       </li>
       <li>
-        <%= link_to "4. Aprobar", "#aprobar", class: "button expanded" %>
+        <%= link_to Setting['home_title_stages_4'], "##{Setting['home_title_stages_4'].gsub(/\s+/, '')}", class: "button expanded" %>
       </li>
     </ul>
   </div>

@@ -44,9 +44,9 @@
       <%= f.label :external_url, 'Enlace a información adicional' %>
       <%= f.text_field :external_url, placeholder: 'Enlace a información adicional', label: false %>
     </div>
-    <% if Setting.to_bool('group_legislation_proposals_is_visible') %>
+    <% if Setting.to_bool('legislation_proposals_group_is_visible') %>
       <div class="small-12 medium-6 column">
-        <%= f.label :geozone_id,  "* #{Setting['group_legislation_proposals_name']}" %>
+        <%= f.label :geozone_id,  "* #{Setting['legislation_proposals_group_name']}" %>
         <%= f.select :geozone_id, geozone_select_options, {include_blank: "Seleccione una opción", label: false} %>
       </div>
     <% end %>
@@ -64,11 +64,11 @@
       </div>
     <% end %>
 
-    <% if Setting.to_bool('categories_legislation_proposals_is_visible') %>
+    <% if Setting.to_bool('legislation_proposals_categories_is_visible') %>
       <div class="small-12 column">
         <div id="category_tags" class="tags">
-          <%= f.label :category_tag_list, Setting['categories_legislation_proposals_name'] %>
-          <p class="help-text" id="tag-list-help-text"><%= Setting['categories_legislation_proposals_help_text']%></p>
+          <%= f.label :category_tag_list, Setting['legislation_proposals_categories_name'] %>
+          <p class="help-text" id="tag-list-help-text"><%= Setting['legislation_proposals_categories_help_text']%></p>
 
           <% @categories.each do |tag| %>
             <a class="js-add-tag-link"><%= tag.name %></a>

@@ -235,6 +235,10 @@ a:focus {
   background: $brand image-url('lateral_acceder.jpg');
 }
 
+#section_help ul li {
+  font-size: 0.9rem;
+}
+
 @media (min-width: 1300px) {
 
 	.margin-footer-p{

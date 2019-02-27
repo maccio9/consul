@@ -73,7 +73,7 @@ class Proposal < ActiveRecord::Base
   scope :is_legislation_proposal, -> { where(is_proposal: false) }
 
   def categories_is_visible?
-    if self.is_proposal || Setting.to_bool('categories_legislation_proposals_is_visible')
+    if self.is_proposal || Setting.to_bool('legislation_proposals_categories_is_visible')
       return true
     else
       return false
@@ -81,7 +81,7 @@ class Proposal < ActiveRecord::Base
   end
 
   def group_is_visible?
-    if self.is_proposal || Setting.to_bool('group_legislation_proposals_is_visible')
+    if self.is_proposal || Setting.to_bool('legislation_proposals_group_is_visible')
       return true
     else
       return false

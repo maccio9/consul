@@ -20,7 +20,7 @@
     <% end %>
     <% if feature?(:legislation_proposals) %>
       <li>
-        <%= layout_menu_link_to "CONSULTAS PÚBLICAS",
+        <%= layout_menu_link_to "CONSULTA PÚBLICA",
                                   legislation_proposals_path(is_proposal: false),
                                   controller_name == 'legislation_proposals',
                                   accesskey: "3",

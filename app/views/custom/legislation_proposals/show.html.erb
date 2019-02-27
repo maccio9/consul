@@ -116,10 +116,10 @@
             <%= simple_format text_with_links(@proposal.retired_explanation), {}, sanitize: false %>
           </div>
         <% end %>
-        <% if Setting.to_bool('categories_legislation_proposals_is_visible') %>
+        <% if Setting.to_bool('legislation_proposals_categories_is_visible') %>
           <%= render 'shared/tags', taggable: @proposal %>
         <% end %>
-        <% if Setting.to_bool('group_legislation_proposals_is_visible') %>
+        <% if Setting.to_bool('legislation_proposals_group_is_visible') %>
           <%= render 'show_geozones', geozonable: @proposal %>
         <% end %>
 
