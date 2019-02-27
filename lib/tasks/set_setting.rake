@@ -78,10 +78,10 @@ namespace :set_setting do
     Setting['legislation_proposals_require_admin'] = 'true'
 
     #set config categories
-    Setting['legislation_proposals_categories_is_visible'] = 'true'
+    Setting['legislation_proposals_categories_is_visible'] = 'false'
     Setting['legislation_proposals_categories_name'] = 'Categorias'
     Setting['legislation_proposals_categories_help_text'] = 'Seleccione una o más categorías del tema de su propuesta'
-    Setting['legislation_proposals_group_is_visible'] = 'true'
+    Setting['legislation_proposals_group_is_visible'] = 'false'
     Setting['legislation_proposals_group_name'] = 'Aporta a'
     Setting['legislation_proposals_title_header'] = "Consulta Pública"
     Setting['legislation_proposals_description_header'] = 'A través del proceso de consulta pública podrás en la Etapa 1, conocer los principios generales de Inteligencia Artificial para el Gobierno Digital,  realizar tus aportes sobre los principios planteados y proponer nuevos principios para integrar. En la Etapa 3, podrás realizar aportes sobre la Estrategia de IA para el Gobierno Digital. <br><br>En la actualidad, los desafíos políticos, éticos, tecnológicos y sociales que presenta esta tecnología reclaman un abordaje holístico y multidisciplinar que genere confianza, garantice derechos y mejore la calidad de vida de las personas. Para elaborar los documentos se convocó a un grupo interdisciplinario interno de Agesic que analizó, debatió y consensuó la propuesta puesta en consulta pública para desarrollar y aplicar soluciones de IA para el Gobierno Digital.”'
