@@ -107,7 +107,7 @@ namespace :set_setting do
     Setting['header_sub_title'] = 'para el Gobierno Digital. Consulta pública'
     Setting['signin_title'] = 'Inteligencia Artificial para el Gobierno Digital. Consulta pública'
     Setting['contact_description'] = 'Por consultas o dudas sobre el proceso, las propuestas o ayuda técnica, contactarse con el Equipo de Gobierno Abierto a <a href="mailto:gobiernoabierto@agesic.gub.uy">gobiernoabierto@agesic.gub.uy</a>'
-    Setting['more_information'] = "El proceso de consulta pública tiene como objetivo alcanzar una Estrategia Nacional de Inteligencia Artificial para el Gobierno Digital. El mismo se desarrollará en 4 etapas."
+    Setting['more_information'] = "El proceso de consulta pública tiene como objetivo alcanzar una Estrategia Nacional de Inteligencia Artificial para el Gobierno Digital. El mismo se desarrollará en 4 etapas: I) Principios de IA. Consulta Pública; II) Principios de IA. Análisis de propuestas; III) Estrategia de IA. Consulta Pública y IV) Aprobación del Documento final de Estrategia de IA."
   end
 
 end
