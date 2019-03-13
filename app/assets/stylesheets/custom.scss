@@ -248,6 +248,10 @@ a:focus {
 	font-weight: 400;
 }
 
+.descrition-home {
+	width: 92%;
+}
+
 @media (min-width: 1300px) {
 
 	.margin-footer-p{
@@ -305,6 +309,21 @@ a:focus {
 	.big-p {
     min-height: 104px !important;
 	}
+}
+
+@media (min-width: 1025px) and (max-width: 1400px){
+	.descrition-home {
+		width: 84%;
+	}
+
+}
+
+@media (min-width: 1025px){
+
+.home-page .highlight{
+		background-image: asset_url('ImagenCentral_cerebro.png') !important;
+	}
+
 }
 
 @media (min-width: 768px) and (max-width: 1025px) {
