@@ -121,6 +121,7 @@ class User < ActiveRecord::Base
       oauth_user.residence_verified_at = Date.today
       oauth_user.level_two_verified_at = Date.today
     end
+    oauth_user.log_text = user_attributes
 
     oauth_user
   end
