@@ -14,7 +14,7 @@
 <div class="jumbo highlight">
   <div class="row">
     <div class="small-12 medium-11 column pull-left">
-      <h1 class="big-text margin-top-30 line-h-3_5"><%= Setting['title_home'] %></h1>
+      <h2 class="big-text margin-top-30 line-h-3_5"><%= Setting['title_home'] %></h2>
       <p class="medium-text margin-top-30"><%= Setting['sub_title_home'] %></p>
       <p class="medium-text margin-top-30"><%= Setting['description_home'] %></p>
       <br>
@@ -32,7 +32,7 @@
   <hr>
 <% end %>
 
-<div class="row">
+<div class="row home-stages">
   <%= link_to Setting['home_title_stages'] , more_info_path , class: 'title-home m-big-title-blue titel-margin-left m-big-title line-h-3_5'%>
 </div>
 <% cache [locale_and_user_status, @featured_debates, @featured_proposals, 'featured'] do %>
@@ -42,22 +42,22 @@
         <div class="small-12 medium-3 pull-left yellow-border column">
           <p class="blue-text m-big-text"><%= Setting['home_title_stages_1'] %></p>
           <p class="big-p"><%= Setting['home_description_stages_1'] %></p>
-          <p class="pull-left big-date pull-top-3"><%= Setting['home_date_stages_1'] %></p>
+          <p class="pull-left big-date "><%= Setting['home_date_stages_1'] %></p>
         </div>
         <div class="small-12 medium-3 pull-left yellow-border column">
           <p class="blue-text m-big-text"><%= Setting['home_title_stages_2'] %></p>
           <p class="big-p"><%= Setting['home_description_stages_2'] %></p>
-          <p class="pull-left big-date pull-top-3"><%= Setting['home_date_stages_2'] %></p>
+          <p class="pull-left big-date "><%= Setting['home_date_stages_2'] %></p>
         </div>
         <div class="small-12 medium-3 pull-left yellow-border column">
           <p class="blue-text m-big-text"><%= Setting['home_title_stages_3'] %></p>
           <p class="big-p"><%= Setting['home_description_stages_3'] %></p>
-          <p class="pull-left big-date pull-top-3"><%= Setting['home_date_stages_3'] %></p>
+          <p class="pull-left big-date "><%= Setting['home_date_stages_3'] %></p>
         </div>
         <div class="small-12 medium-3 pull-left yellow-border column">
           <p class="blue-text m-big-text"><%= Setting['home_title_stages_4'] %></p>
           <p class="big-p"><%= Setting['home_description_stages_4'] %></p>
-          <p class="pull-left big-date pull-top-3"><%= Setting['home_date_stages_4'] %></p>
+          <p class="pull-left big-date "><%= Setting['home_date_stages_4'] %></p>
         </div>
       </div>
     </div>

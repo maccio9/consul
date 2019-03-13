@@ -232,11 +232,16 @@ a:focus {
 }
 
 .auth-image {
-  background: $brand image-url('lateral_acceder.jpg');
+  background: $brand image-url('lateral_acceder.png');
 }
 
 #section_help ul li {
   font-size: 0.9rem;
+}
+
+.home-page .jumbo h2.big-text {
+	color: #fff;
+	font-weight: 400;
 }
 
 @media (min-width: 1300px) {
@@ -248,19 +253,16 @@ a:focus {
 }
 
 @media (min-width: 100px) and (max-width: 425px) {
-  .auth-image {
-    background: $brand image-url('lateral_acceder_smart.jpg');
-  }
+
+  .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
+     float: left;
+	}
 }
 
 @media (min-width: 810px) and (max-width: 1030px) {
 
 	.titel-margin-left{
 		margin-left: 15px;
-	}
-
-	.small-margin-left{
-		margin-left: 16px;
 	}
 
 	.top-bar .top-bar-title a {
@@ -272,6 +274,33 @@ a:focus {
 		min-height: 10rem !important;
 		margin-bottom: 20px;
 	}
+
+	.big-p {
+    font-size: 16px !important;
+    min-height: 78px !important;
+	}
+}
+
+@media (min-width: 830px) and (max-width: 1242px) {
+	.yellow-border{
+		max-height: 10rem !important;
+		min-height: 10rem !important;
+		margin-bottom: 20px;
+	}
+	.big-p {
+    min-height: 76px !important;
+	}
+}
+
+@media (min-width: 720px) and (max-width: 812px) {
+	.yellow-border{
+		max-height: 13rem !important;
+		min-height: 13rem !important;
+		margin-bottom: 20px;
+	}
+	.big-p {
+    min-height: 104px !important;
+	}
 }
 
 @media (min-width: 768px) and (max-width: 1025px) {
@@ -280,27 +309,31 @@ a:focus {
 		margin-left: 15px;
 	}
 
-	.small-margin-left{
-		margin-left: 16px;
-	}
-
 	.top-bar .top-bar-title a {
 		padding-left: 12px;
 	}
 
-	.yellow-border{
-		max-height: 9rem !important;
-		min-height: 9rem !important;
-		margin-bottom: 20px;
-	}
-
 	.big-p {
     font-size: 16px !important;
+    min-height: 104px;
 	}
 
 }
 
 @media (min-width: 100px) and (max-width: 700px) {
+	.home-page .jumbo .small-12 {
+		padding-left: 1.25rem;
+    padding-right: 1.25rem;
+	}
+	.home-page .home-stages {
+		padding-left: 1.25rem;
+    padding-right: 1.25rem;
+	}
+	.home-page .home-stages .title-home{
+		padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+	}
 	.logo {
 	  font-size: 18px;
 	  display: inline;
@@ -378,8 +411,6 @@ a:focus {
 	}
 
 	.yellow-border{
-		max-height: 11rem !important;
-		min-height: 11rem !important;
 		margin-bottom: 20px;
 	}
 
@@ -413,9 +444,25 @@ a:focus {
 		margin-bottom: 0px;
 	}
 
-	.small-margin-left{
-		margin-left: 20px;
+}
+
+@media (min-width: 575px) and (max-width: 639px) {
+	.top-bar .top-bar-right {
+		width: initial !important;
 	}
+
+	.menu-margin{
+	  margin-top: 20px;
+	  float: left !important;
+	}
+	.log-text{
+		font-size: 22px;
+		display: block;
+		margin-top: 0px;
+	}
+	.auth-image {
+    background: $brand image-url('ImagenCentral_cerebroAbajo.png');
+  }
 }
 
 @media (min-width: 100px) and (max-width: 575px) {
@@ -423,12 +470,17 @@ a:focus {
 		width: initial !important;
 	}
 
+	.auth-image {
+    background: $brand image-url('ImagenCentral_cerebroAbajo.png');
+  }
+
 	.big-p {
     font-size: 18px !important;
+    min-height: 52px;
 	}
 
 	.margin-footer-p{
-		margin-left: 10px !important;
+		margin-left: 0px !important;
 		margin-top: 0px !important;
 		float: left !important;
 	}
@@ -477,6 +529,10 @@ a:focus {
 
 	.footer {
 		padding-top: 0.5rem;
+	}
+
+	.sub-task-home{
+		width: 95%;
 	}
 }
 
