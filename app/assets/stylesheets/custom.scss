@@ -204,7 +204,7 @@ a:hover, a:focus {
 
 .top-bar .top-bar-title a {
   line-height: 0.5rem;
-  width: 550px;
+  width: 560px;
 }
 
 .footer, .push {
@@ -377,7 +377,7 @@ a:focus {
 @media (min-width: 100px) and (max-width: 768px) {
 	.logo {
 	  font-size: 18px !important;
-	  display: inline;
+	  display: grid;
 	  margin-left: 12px;
 	}
 
@@ -463,6 +463,10 @@ a:focus {
 	.auth-image {
     background: $brand image-url('ImagenCentral_cerebroAbajo.png');
   }
+
+  .logo {
+    display: inline;
+  }
 }
 
 @media (min-width: 100px) and (max-width: 575px) {
@@ -539,7 +543,7 @@ a:focus {
 @media (min-width: 100px) and (max-width: 375px) {
 	.logo {
 	  font-size: 14px !important;
-	  display: inline;
+	  display: grid;
 	}
 
 	.condition-and-privacy-small {
