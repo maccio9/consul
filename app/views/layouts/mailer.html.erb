@@ -11,8 +11,8 @@
     <tr>
       <td>
         <div style='background: #08296c; width: 100%; padding: 10px;'>
-          <p style="color: #f2ca30; font-size: 1.5rem !important; margin-bottom: 3px; margin-top: 8px;"> Gobierno Abierto. </p>
-        <a style="color: #fff;font-size: 1.5rem;font-weight: lighter; text-decoration: none;" href="http://gogle.com">4to Plan de Acción Nacional 2018 - 2020</a>
+          <p style="color: #a0d9f7; font-size: 1.5rem !important; margin-bottom: 3px; margin-top: 8px;"> <%= Setting['header_title'] %> </p>
+        <a style="color: #fff;font-size: 1.5rem;font-weight: lighter; text-decoration: none;" href="http://gogle.com"><%= Setting['header_sub_title'] %></a>
       </div>
       </td>
     </tr>
@@ -26,7 +26,7 @@
     <tr>
       <td style="text-align: center; border-top: 1px solid #dadfe1; padding-top: 20px;">
         <p style="font-family: 'Open Sans','Helvetica Neue',arial,sans-serif; margin: 0;padding: 0;line-height: 1.5em;color: #797f7f; font-size: 12px;">
-        4to Plan de Acción Nacional 2018 - 2020</p>
+        <%= Setting['header_title'] %></p>
 
         <p style="font-family: 'Open Sans','Helvetica Neue',arial,sans-serif; margin: 0;padding: 0;line-height: 1.5em;color: #222; font-size: 10px; margin-top: 12px;">
         <%= t('mailers.no_reply') %></p>
