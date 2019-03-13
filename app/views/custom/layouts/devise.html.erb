@@ -18,9 +18,9 @@
       <div class="auth-image small-12 medium-3 column">
 
         <h1 class="logo margin">
-          <%= link_to root_path do %>
-            <%= image_tag(image_path_for('uruguaylogo.png'), class: 'float-left margin-top-20', alt: t("layouts.header.logo")) %>
-          <a class="log-text line-h-2"><%= Setting['signin_title'] %></a>
+          <%= link_to root_path class: 'ico-logo' do %>
+            <%= image_tag(image_path_for('ai_logo.png'), class: 'float-left margin-top-20', alt: t("layouts.header.logo")) %>
+          <a class="log-text line-h-2 ico-text"><%= Setting['header_title'] %><br><%= Setting['header_sub_title'] %></a>
           <% end %>
         </h1>
       </div>

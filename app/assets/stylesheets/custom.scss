@@ -235,6 +235,10 @@ a:focus {
   background: $brand image-url('lateral_acceder.png');
 }
 
+.auth-image h1 a{
+	text-align: left;
+}
+
 #section_help ul li {
   font-size: 0.9rem;
 }
@@ -359,7 +363,7 @@ a:focus {
 	}
 
 	.highlight{
-		background-image: asset_url('ImagenCentral_2.jpg') !important;
+		background-image: asset_url('ImagenCentral_cerebroAbajo.png') !important;
 		min-height: 200px;
 	}
 	.logo-yellow {
@@ -377,7 +381,7 @@ a:focus {
 @media (min-width: 100px) and (max-width: 768px) {
 	.logo {
 	  font-size: 18px !important;
-	  display: grid;
+	  display: -webkit-inline-box;
 	  margin-left: 12px;
 	}
 
@@ -446,6 +450,16 @@ a:focus {
 
 }
 
+@media (min-width: 425px) and (max-width: 591px) {
+	.ico-logo {
+		max-width: 80px;
+	}
+
+	.ico-text {
+		max-width: calc(100% - 80px)
+	}
+}
+
 @media (min-width: 575px) and (max-width: 639px) {
 	.top-bar .top-bar-right {
 		width: initial !important;
@@ -461,12 +475,24 @@ a:focus {
 		margin-top: 0px;
 	}
 	.auth-image {
-    background: $brand image-url('ImagenCentral_cerebroAbajo.png');
+		height: 148px;
+    background: $brand image-url('ImagenCentral_smart.png');
   }
 
   .logo {
     display: inline;
   }
+
+}
+
+@media (min-width: 375px) and (max-width: 425px) {
+	.ico-logo {
+		max-width: 80px;
+	}
+
+	.ico-text {
+		max-width: calc(100% - 80px)
+	}
 }
 
 @media (min-width: 100px) and (max-width: 575px) {
@@ -474,8 +500,13 @@ a:focus {
 		width: initial !important;
 	}
 
+	.logo .log-text{
+		font-size: 19px;
+	}
+
 	.auth-image {
-    background: $brand image-url('ImagenCentral_cerebroAbajo.png');
+		height: 148px;
+    background: $brand image-url('ImagenCentral_smart.png');
   }
 
 	.big-p {
@@ -543,11 +574,31 @@ a:focus {
 @media (min-width: 100px) and (max-width: 375px) {
 	.logo {
 	  font-size: 14px !important;
-	  display: grid;
+	  display: -webkit-inline-box;
+	}
+
+	.logo .log-text{
+		font-size: 18px;
 	}
 
 	.condition-and-privacy-small {
 	  display: block;
+	}
+
+	.ico-logo {
+		max-width: 80px;
+	}
+
+	.ico-text {
+		max-width: 266px;
+	}
+
+	.ico-logo {
+		max-width: 80px;
+	}
+
+	.ico-text {
+		max-width: calc(100% - 80px)
 	}
 
 }
