@@ -147,8 +147,10 @@ class LegislationProposalsController < ApplicationController
     end
 
     def check_permit_edit
-      if @proposal && !@proposal.permit_delete_or_edit?
-        redirect_to proposal_path(@proposal), notice: "No se puede editar esta consulta pública porque ya ha recibido apoyos o comentarios."
+      if current_user && !current_user.administrator?
+        if @proposal && !@proposal.permit_delete_or_edit?
+          redirect_to proposal_path(@proposal), notice: "No se puede editar esta consulta pública porque ya ha recibido apoyos o comentarios."
+        end
       end
     end
 
