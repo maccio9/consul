@@ -72,10 +72,6 @@ class Proposal < ActiveRecord::Base
   scope :is_proposal, -> { where(is_proposal: true) }
   scope :is_legislation_proposal, -> { where(is_proposal: false) }
 
-  def self.title_max_length
-    160
-  end
-
   def categories_is_visible?
     if self.is_proposal || Setting.to_bool('legislation_proposals_categories_is_visible')
       return true
