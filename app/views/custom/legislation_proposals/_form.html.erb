@@ -7,8 +7,8 @@
     </div>
     <div class="small-12 column">
       <%= f.label :title, t("legislation_proposals.form.proposal_title") %>
-      <p class="help-text" id="summary-help-text">(máximo 80 caracteres)</p>
-      <%= f.text_field :title, maxlength: Proposal.title_max_length, placeholder: t("legislation_proposals.form.proposal_title"), label: false, data: {js_suggest_result: "js_suggest_result", js_suggest: "#js-suggest", js_url: suggest_proposals_path}%>
+      <p class="help-text" id="summary-help-text">(máximo <%= Proposal.title_max_length %> caracteres)</p>
+      <%= f.text_field :title, maxlength: Proposal.title_max_length, placeholder: t("legislation_proposals.form.proposal_title"), label: false, data: {js_suggest_result: "js_suggest_result", js_suggest: "#js-suggest", js_url: suggest_legislation_proposals_path}%>
     </div>
     <%= hidden_field_tag 'is_proposal', 'false'  %>
     <div id="js-suggest"></div>

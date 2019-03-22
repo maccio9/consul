@@ -5,4 +5,8 @@ resources :legislation_proposals do
     get :retire_form
     patch :retire
   end
+
+  collection do
+    get :suggest
+  end
 end
