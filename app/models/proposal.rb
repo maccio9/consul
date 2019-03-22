@@ -73,7 +73,7 @@ class Proposal < ActiveRecord::Base
   scope :is_legislation_proposal, -> { where(is_proposal: false) }
 
   def self.title_max_length
-    180
+    160
   end
 
   def categories_is_visible?
