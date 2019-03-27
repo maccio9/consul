@@ -4,7 +4,7 @@
        <br><br><br><br><br>
        <h2>Ingreso con Usuario y E-mail</h2>
        <br>
-       <p><%= link_to 'Ingresar', '/users/sign_in?login_admin=true'%></p>
+       <p><%= link_to 'Ingresar', new_user_session_path(login_admin:true)%></p>
     </div>
   </div>
 </div>

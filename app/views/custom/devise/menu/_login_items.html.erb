@@ -35,7 +35,7 @@
   </li>
   <li>
     <%= link_to "Contacto",
-                '/contacto', rel: "nofollow" %>
+                page_path('contacto'), rel: "nofollow" %>
   </li>
   <li>
     <%= link_to t("devise_views.menu.login_items.logout"),
@@ -44,7 +44,7 @@
 <% else %>
   <li>
     <%= link_to "Contacto",
-                '/contacto', rel: "nofollow" %>
+                page_path('contacto'), rel: "nofollow" %>
   </li>
   <li>
     <%= link_to "Acceder",
