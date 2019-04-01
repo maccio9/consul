@@ -27,10 +27,9 @@ namespace :admin do
       put :restore
       put :confirm_hide
     end
-    collection do
-      get :download_excel
-    end
   end
+
+  get 'reports/download_excel', to: "reports#download_excel", as: :reports_download_excel
 
   resources :spending_proposals, only: [:index, :show, :edit, :update] do
     member do
