@@ -1,7 +1,7 @@
 <% provide :title do %><%= t("devise_views.sessions.new.title") %><% end %>
 
 <h2>Iniciar sesión </h2>
-<p> Si ya cuenta con un usuario de ID Uruguay o cédula electrónica haga clic en</p>
+<p> Si tenés un Usuario gub.uy o Cédula de Identidad Digital, hacé clic en</p>
 <% if feature? :saml_login %>
 
     <%= link_to "Iniciar sesión", user_omniauth_authorize_path(:saml),
@@ -11,8 +11,8 @@
 <% end %>
 <br><br>
 <h3>Registrarse</h3>
-<p>Para poder utilizar esta plataforma debe tener un usuario creado en ID Uruguay o contar con cédula electrónica</p>
-<p>Para crear un usuario en ID Uruguay haga clic en </p><%= link_to 'Registrarme en ID Uruguay', 'https://mi.iduruguay.gub.uy/registro', target: '_blank', class: 'button' %>
+<p>Para poder utilizar esta plataforma, necesitás Usuario gub.uy o Cédula de Identidad Digital:</p>
+<%= link_to 'Crear Usuario gub.uy', 'https://mi.iduruguay.gub.uy/registro', target: '_blank', class: 'button' %>
 <br>
 
 <% render 'devise/omniauth_form' %>
@@ -51,10 +51,12 @@
 
 <%= render "devise/shared/links" %>
 <br><br>
-<%= link_to '¿Qué es ID Uruguay?', '#', class: 'show-text-home'%>
-<p class=''>
-  ID Uruguay es la plataforma de autenticación implementada por AGESIC para centralizar cuentas de usuarios y facilitar el acceso web a los servicios digitales del Estado. Esto quiere decir que, una vez registrado en <%= link_to 'gub.uy', 'https://www.gub.uy/', target: :_blank %> (antes ID Uruguay), podrás ingresar a los servicios vinculados a la cuenta sin necesidad de nuevos registros ni contraseñas adicionales.</p>
+<%= link_to '¿Qué es Usuario gub.uy?', '#', class: 'show-text-home'%>
+<p class=''>Usuario gub.uy es un sistema que te permite, mediante una única cuenta, acceder a todos los trámites y servicios digitales del Estado sin necesidad de nuevos registros ni contraseñas adicionales.</p>
 <p>La autenticación se puede realizar a través de dos vías diferentes:</p>
+
 <p class="text-home-info">1.Mediante usuario y contraseña</p>
-<p class="text-home-info">2.Mediante cédula electrónica: Para ello, es necesario contar con un lector de tarjetas inteligentes, donde se inserta la cédula, y colocar el PIN una vez que este es solicitado. Los componentes necesarios para utilizar este medio se instalan automáticamente en el navegador del usuario la primera vez que se utilice el servicio. Este mecanismo no exige registro previo.</p>
-<p><%=link_to 'Más información sobre ID Uruguay ', 'https://mi.iduruguay.gub.uy/ayuda', target: '_blank'%>
+
+<p class="text-home-info">2.Mediante Cédula de Identidad Digital: Para ello, es necesario contar con un lector de tarjetas inteligentes, donde se inserta la cédula, y colocar el PIN una vez que este es solicitado. Los componentes necesarios para utilizar este medio se instalan automáticamente en el navegador del usuario la primera vez que se utilice el servicio. Este mecanismo no exige registro previo</p>
+
+<p><%=link_to 'Más información sobre Usuario gub.uy ', 'https://mi.iduruguay.gub.uy/ayuda', target: '_blank'%>
