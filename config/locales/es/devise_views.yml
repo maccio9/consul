@@ -75,7 +75,7 @@ es:
     shared:
       links:
         login: Entrar
-        new_confirmation: '¿No has recibido instrucciones para confirmar tu cuenta?'
+        new_confirmation: '¿No recibiste instrucciones para confirmar tu cuenta?'
         new_password: '¿Olvidaste tu contraseña?'
         new_unlock: '¿No has recibido instrucciones para desbloquear?'
         signin_with_provider: Entrar con %{provider}

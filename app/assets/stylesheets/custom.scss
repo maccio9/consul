@@ -518,6 +518,9 @@ a:focus {
 	.top-bar .top-bar-right {
 		width: initial !important;
 	}
+	.negativ-margin {
+		margin-top: 0px !important;
+	}
 
 	.logo .log-text{
 		font-size: 19px;
@@ -558,7 +561,6 @@ a:focus {
 
 	.presidencia-margin{
 		margin-right: 60px;
-    display:none;
 	}
 
 	.pull-top-3{
