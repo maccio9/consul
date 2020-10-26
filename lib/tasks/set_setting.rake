@@ -10,6 +10,7 @@ namespace :set_setting do
     Setting['feature.polls'] = false
     Setting['feature.twitter_login'] = false
     Setting['feature.facebook_login'] = false
+    Setting['feature.saml_login'] = true
     Setting['feature.google_login'] = false
     Setting['feature.public_stats'] = false
     Setting['feature.budgets'] = false
@@ -44,9 +45,9 @@ namespace :set_setting do
     Setting['mailer_from_address'] = 'gobiernoabierto@agesic.gub.uy'
 
     #create user admin
-    if User.where(email: 'jose.poncedeleon@agesic.gub.uy').empty?
-      pass = SecureRandom.hex(8)
-      admin = User.create!(username: 'jose.poncedeleon', email: 'jose.poncedeleon@agesic.gub.uy', password: pass, password_confirmation: pass, confirmed_at: Time.current, terms_of_service: "1")
+    if User.where(email: 'santiago.maccio@agesic.gub.uy').empty?
+      pass = "12345678"
+      admin = User.create!(username: 'santiago.maccio', email: 'santiago.maccio@agesic.gub.uy', password: pass, password_confirmation: pass, confirmed_at: Time.current, terms_of_service: "1")
       admin.residence_verified_at = Date.today
       admin.level_two_verified_at = Date.today
       admin.save
