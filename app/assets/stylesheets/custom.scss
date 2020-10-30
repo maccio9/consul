@@ -232,7 +232,7 @@ a:focus {
 }
 
 .auth-image {
-  background: $brand image-url('lateral_acceder_sinCerebro.png');
+  background: $brand image-url('lateral_acceder_5ta_rayita.png');
 }
 
 .auth-image h1 a{
@@ -252,6 +252,25 @@ a:focus {
 	width: 92%;
 }
 
+.more-info-content ul {
+	font-family: Montserrat-Medium !important;
+	margin-left: 2.25rem;
+
+	li {
+		font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 1.625rem;
+	}
+}
+
+.footer-images-mobile {
+	display: none;
+}
+.footer-images-desktop {
+	display: block;
+}
+
+
 @media (min-width: 1300px) {
 
 	.margin-footer-p{
@@ -260,11 +279,21 @@ a:focus {
 
 }
 
+@media (min-width: 100px) and (max-width: 766px) {
+	.footer-images-mobile {
+		display: block;
+	}
+	.footer-images-desktop {
+		display: none;
+	}
+}
+
 @media (min-width: 100px) and (max-width: 425px) {
 
   .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
      float: left;
 	}
+
 }
 
 @media (min-width: 810px) and (max-width: 1030px) {
@@ -321,7 +350,7 @@ a:focus {
 @media (min-width: 1025px){
 
 .home-page .highlight{
-		background-image: asset_url('ImagenCentral_cerebro.png') !important;
+		background-image: asset_url('ImagenCentral_5ta_rayita.png') !important;
 	}
 
 }
@@ -382,7 +411,7 @@ a:focus {
 	}
 
 	.highlight{
-		background-image: asset_url('ImagenCentral_cerebroAbajo.png') !important;
+		background-image: asset_url('ImagenCentral_2_5ta_rayita.png') !important;
 		min-height: 200px;
 	}
 	.logo-yellow {
@@ -495,7 +524,7 @@ a:focus {
 	}
 	.auth-image {
 		height: 148px;
-    background: $brand image-url('ImagenCentral_smart.png');
+    background: $brand image-url('ImagenCentral_smart_636x148_5ta_rayitas.png');
   }
 
   .logo {
@@ -528,7 +557,7 @@ a:focus {
 
 	.auth-image {
 		height: 148px;
-    background: $brand image-url('ImagenCentral_smart.png');
+    background: $brand image-url('ImagenCentral_smart_636x148_5ta_rayitas.png');
   }
 
 	.big-p {

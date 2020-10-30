@@ -10,7 +10,6 @@
 <% end %>
 
 <main>
-
   <%= render "shared/section_header", title: Setting['proposals_title_header'], i18n_namespace: "proposals.index.section_header", description: Setting['proposals_description_header'],  title_help: Setting['proposals_title_help'], is_proposals: true %>
 
   <div class="row">
@@ -75,15 +74,11 @@
           <div id="section_help" class="margin" data-magellan-target="section_help">
             <h2 class="sidebar-title"><%= t("proposals.index.section_footer.title") %></h2>
             <p>Cualquier persona puede crear propuestas, ya sea en carácter individual o en representación de organismos públicos, sociedad civil organizada, academia o sector privado.<br><br>
-            Para crear una propuesta, <strong>Regístrate en <%= link_to 'ID Uruguay', 'https://mi.iduruguay.gub.uy/registro', target: :_blank %> e inicia sesión y luego hacer clic en el botón "Crea una propuesta". </strong>  y completa los datos que aparecen en el formulario.<br><br>
-            Ingresar el título de la propuesta, incorporar un resumen de los aspectos más importantes y
-            una descripción más detallada. Puede adjuntar materiales relacionados, como imágenes,
-            videos, documentos y enlaces a páginas de internet que complemente, enriquezca o justifique su propuesta.<br><br> Una vez creada, la propuesta aparecerá en el listado de propuestas para que cualquier
-            persona pueda comentarla.<br><br>
-            <strong>Plazo para ingresar y comentar propuestas hasta el 30 de junio de 2018.</strong><br><br>
-            Se denominan <strong>"propuestas de Gobierno Abierto"</strong> a iniciativas que aporten a los pilares de
-            gobierno abierto: transparencia y acceso a la información pública, rendición de cuentas
-            públicas, participación ciudadana, colaboración e innovación pública y ciudadana las cuales buscan contribuir al interés general sobre una temática determinada.<br>
+            Para crear una propuesta, debe registrarse en Usuario <%= link_to 'gub.uy', 'https://gub.uy', target: :_blank %> e iniciar sesión. Luego hacer clic en el botón "Crear una propuesta" y completá los datos que aparecen en el formulario.<br><br>
+            Ingresá el título de la propuesta, un resumen de la idea y una explicación más detallada de las acciones propuestas. Además existe la posibilidad de adjuntar materiales, como imágenes, videos, documentos y links a páginas de internet que complemente, enriquezca o justifique su propuesta.<br><br>
+            Una vez creada, la propuesta aparecerá en el listado de propuestas para que otras personas puedan comentar y/o realizar un aporte a la misma.<br><br>
+            Plazo para ingresar y comentar propuestas Enero 2021<br><br>
+            Una "propuesta de Gobierno Abierto" es una idea para impulsar acciones vinculadas a transparencia, acceso a la información pública, rendición de cuentas, participación y colaboración ciudadana e innovación. Estas acciones podrán ser de cualquier temática de interés de la persona, por ejemplo salud, medio ambiente, anticorrupción, discapacidad, derechos humanos, compras públicas, desarrollo local, etc.<br>
             </p>
           </div>
         <% end %>
