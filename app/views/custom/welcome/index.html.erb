@@ -7,8 +7,8 @@
 <% provide :social_media_meta_tags do %>
   <%= render "shared/social_media_meta_tags",
               social_url: root_url,
-              social_title: 'Gobierno abierto',
-              social_description: 'Propuestas para el 4ª Plan de Acción' %>
+              social_title: setting['meta_title'],
+              social_description: setting['meta_description'] %>
 <% end %>
 
 <div class="jumbo highlight">
